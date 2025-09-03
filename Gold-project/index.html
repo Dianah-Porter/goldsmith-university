@@ -108,17 +108,47 @@
         </div>
       </div>
 
-      <div class="videos">
-        <h1 class="text-4xl font-bold ml-6 mr-6 mb-12 ">Goldsmiths life</h1>
-        <video controls>
-          <source src="" type="video/mp4" class="w-full">
-        </video>
-      </div>
+      <div class="bg-gray-100 py-12">
+      <h1 class="text-4xl font-bold ml-6 mr-6 mb-12 ">Goldsmiths life</h1>
 
+      <div class="videos ml-4 mr-4 lg:flex lg:space-x-4 mb-12" id="main">
+        
+        <video controls class="main-video w-full h-96" id="main-video">
+          <source src="./images/Practice the best tongue twisters for clear pronunciation.mp4" type="video/mp4" class="w-full">
+        </video>
+        <div class="playlist h-96 lg:gap-4 overflow-y-scroll space-y-1 pt-3">
+          <div class="1 flex space-x-5 h-32 bg-gray-600 text-white ">
+          <video src="./images/devx.mp4"  type='video/mp4' class="w-56 " onclick="playThis(this)" controls muted></video>
+          <a href="#main" class="">Meet or students with in the classrooms </a>
+        </div>
+        <div class="1 flex space-x-5 h-32 bg-gray-300">
+          <video src="./images/Fisherman and His Wife in English _ Stories for Teenagers _ @EnglishFairyTales.mp4"  type='video/mp4' class="w-56" onclick="playThis(this)" controls muted></video>
+          <a href="#main" class="">Fisherman and His Wife in English _ Stories for Teenagers </a>
+        </div>
+        <div class="1 flex space-x-5 h-32 bg-gray-300">
+          <video src="./images/Learn CSS Grid the easy way.mp4"  type='video/mp4' class="w-56" onclick="playThis(this)" controls muted></video>
+          <a href="#main" class="">Learn CSS Grid the easy way </a>
+        </div>
+        <div class="1 flex space-x-5 h-32 bg-gray-300">
+          <video src="./images/Nick Vujicic SPEECH - MOTIVATIONAL VIDEO - 2016_ Never give up_ Nick's life without limbs.mp4"  type='video/mp4' class="w-56" onclick="playThis(this)" controls muted></video>
+          <a href="#main" class="">Nick Vujicic SPEECH - MOTIVATIONAL VIDE </a>
+        </div>
+        </div>
+        
+      </div>
       </div>
 
       
-    
+      </div>
+
+      <script>
+          function playThis(videoEle){
+            let mainVideo = document.getElementById('main-video');
+            mainVideo.src = videoEle.src;
+            mainVideo.play();
+          }
+      </script>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
